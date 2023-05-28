@@ -24,7 +24,7 @@ dependencies {
 	// lombok
 	implementation 'org.projectlombok:lombok'
 	// H2
-	implementation 'com.h2database:h2'
+	testImplementation 'com.h2database:h2'
 
 	// start
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
@@ -36,4 +36,17 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+test {
+	testLogging {
+		events "passed", "skipped", "failed"
+
+		showExceptions true
+		exceptionFormat "full"
+		showCauses true
+		showStackTraces true
+
+		showStandardStreams = false
+	}
 }
