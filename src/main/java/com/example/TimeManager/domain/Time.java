@@ -21,7 +21,8 @@ public class Time {
     private Duration duration;
 
     @Builder
-    public Time(String groupName, String subject, LocalDateTime date, Duration duration) {
+    public Time(long id, String groupName, String subject, LocalDateTime date, Duration duration) {
+        this.id = id;
         this.groupName = groupName;
         this.subject = subject;
         this.date = date;

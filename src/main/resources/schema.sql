@@ -1,0 +1,1 @@
+create table time (id bigint not null, date timestamp, duration bigint, group_name varchar(255), subject varchar(255), primary key (id));
